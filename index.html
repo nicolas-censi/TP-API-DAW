@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty API | TP Clase 11</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="contenedor-principal">
+        <header class="cabecera">
+            <h1>Directorio <span>Rick & Morty</span></h1>
+            <p>Consulta de personajes consumiendo API REST</p>
+        </header>
+
+        <!-- Sección de controles y filtros -->
+        <section class="panel-controles">
+            <div class="accion-principal">
+                <button id="btnTodos" class="btn-primario">Cargar Todos los Personajes</button>
+            </div>
+            
+            <hr class="divisor">
+
+            <div class="filtros">
+                <h2>Filtrar Personajes</h2>
+                <div class="grupo-filtros">
+                    <input type="text" id="filtroName" placeholder="Nombre (Ej: Rick)">
+                    <input type="text" id="filtroStatus" placeholder="Estado (alive, dead, unknown)">
+                    <input type="text" id="filtroSpecies" placeholder="Especie (Ej: Human)">
+                    <input type="text" id="filtroType" placeholder="Tipo (Ej: Genetic experiment)">
+                    <input type="text" id="filtroGender" placeholder="Género (female, male, genderless, unknown)">
+                </div>
+                <button id="btnFiltrar" class="btn-secundario">Aplicar Filtros</button>
+            </div>
+        </section>
+
+        <!-- Manejo de estados y errores -->
+        <p id="estado" class="mensaje-oculto"></p>
+
+        <!-- Contenedor dinámico -->
+        <section id="contenedorPersonajes" class="grilla-personajes">
+            <!-- Las tarjetas se inyectan acá desde JavaScript -->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
